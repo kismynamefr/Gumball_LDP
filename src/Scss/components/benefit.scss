@@ -143,20 +143,48 @@
         flex-direction: column;
         align-items: center;
 
-        img {
-            transform: rotate(-8deg);
-            width: 30vw;
+        &>img {
+            transform: rotate(-8.6deg);
+            width: 40vw;
+
+            @include TabletMobile {
+                width: 50vw;
+            }
+
+            @include MinTabletMobile {
+                width: 65vw;
+            }
+        }
+    }
+
+    &-button {
+        margin-top: 20px;
+        border-radius: 24px;
+        transition: var(--smooth);
+        cursor: pointer;
+
+        &:hover {
+            scale: 0.9;
+            box-shadow: 2px 4px 12px var(--yellow);
         }
     }
 
     .progress {
         --progress: 0%;
-        width: 50vw;
-        height: 3vw;
+        width: 60vw;
+        height: 50px;
         border: 4px solid var(--black);
         border-radius: 8px;
-        padding: 12px 10px;
         box-shadow: 0 0 10px #aaa;
+
+        @include TabletMobile {
+            width: 80vw;
+        }
+
+        @include MinTabletMobile {
+            width: 90vw;
+            height: 40px;
+        }
     }
 
     .progress .bar {
@@ -165,7 +193,6 @@
         height: 100%;
         background: var(--yellow);
         background-repeat: repeat;
-        box-shadow: 0 0 10px 0px orange;
         animation:
             shine 4s ease-in infinite,
             end 1s ease-out 1 7s;
@@ -192,11 +219,11 @@
 
         0%,
         100% {
-            box-shadow: 0 0 10px 0px orange;
+            box-shadow: 0 0 10px 0px var(--yellow);
         }
 
         50% {
-            box-shadow: 0 0 15px 5px orange;
+            box-shadow: 0 0 15px 5px var(--yellow);
         }
     }
 }

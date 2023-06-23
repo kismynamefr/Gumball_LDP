@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import rainbow from '../assets/images/banner1.png'
+import btn from '../assets/images/button.png'
 
 const Loading = () => {
 
@@ -9,6 +10,9 @@ const Loading = () => {
         <img src={rainbow} alt="rainbow" />
         <div className="progress">
           <div className="bar"></div>
+        </div>
+        <div className="loading-button">
+          <img src={btn} alt="button" />
         </div>
       </div>
     </div>
