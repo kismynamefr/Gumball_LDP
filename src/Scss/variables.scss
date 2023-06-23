@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Lapsus;
+    src: url(../../public/LapsusPro-Bold.otf);
+}
+
+:root {
+    --white: white;
+    --whiteOpacity: rgba(255, 255, 255, 0.1);
+    --yellow: #FFEE05;
+    --black: #1A2129;
+    --bgGradient: linear-gradient(180deg, rgba(101, 193, 202, 0.7) 0%, rgba(101, 193, 202, 0.28) 100%);
+    --bgNavbar: rgba(101, 193, 202, 0.302);
+    --bgMenu: rgba(101, 193, 202, 1);
+    --bgBanner: #7C8089;
+    --bgRoadmap: #98DFBB;
+    --bgBenefit: #030714;
+    --smooth: all 0.4s;
+}

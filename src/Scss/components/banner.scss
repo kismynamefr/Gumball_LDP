@@ -1,0 +1,172 @@
+.banner {
+    background: var(--bgBanner);
+    padding-bottom: 10vw;
+
+    &-bg {
+        position: relative;
+
+        .refrigerator {
+            position: absolute;
+            right: 3vw;
+            bottom: 18vw;
+            width: 9vw;
+        }
+
+        .banner-image {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 15%;
+            @include flexCenter;
+            gap: 8vw;
+
+            &>img {
+                width: 35vw;
+            }
+
+            &-right {
+                img:last-child {
+                    width: 15vw;
+                    margin-left: 4vw;
+                }
+
+                .rainbow {
+                    width: 32vw;
+                    animation: zoomIn linear 5s infinite;
+                }
+            }
+        }
+
+        &.--bg-house {
+            margin-top: -21vw;
+
+            .banner-image {
+                top: unset;
+                bottom: -5vw;
+                align-items: end;
+                gap: 15vw;
+
+                .text {
+                    width: 50vw;
+                }
+
+                img:last-child {
+                    width: 20vw;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        padding-top: 20vw;
+        position: relative;
+
+        .paper {
+            position: absolute;
+            top: 35%;
+            width: 6vw;
+            left: 0;
+
+            &.--top {
+                top: 12%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        &__top {
+            @include flexCenter;
+            gap: 6vw;
+
+            @include MinTabletMobile {
+                flex-direction: column;
+            }
+
+            .image {
+                width: 33vw;
+                position: relative;
+
+                @include Mobile {
+                    width: 60%;
+                }
+
+                .chervon {
+                    position: absolute;
+                    left: 92%;
+                    top: 4vw;
+                    width: 10vw;
+
+                    @media (max-width: 1300px) {
+                        top: 2vw;
+                    }
+
+                    @include MinTabletMobile {
+                        display: none;
+                    }
+                }
+            }
+
+            p {
+                width: 40vw;
+                font-size: 1.2vw;
+                line-height: 1.5;
+                color: var(--white);
+                font-family: 'Comic Neue', cursive;
+
+                @include Desktop {
+                    font-size: 16px;
+                }
+
+                @include TabletMobile {
+                    font-size: 13px;
+                }
+
+                @include MinTabletMobile {
+                    width: 80%;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__bottom {
+            margin-top: 10vw;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 3vw;
+
+            img {
+                width: 20vw;
+            }
+
+            .attention {
+                width: 45vw;
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    color: var(--white);
+                    font-size: 3vw;
+                    font-family: 'Lapsus';
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 0.5;
+    }
+
+    100% {
+        scale: 1;
+    }
+}

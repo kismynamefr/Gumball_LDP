@@ -1,0 +1,119 @@
+.roadmap {
+    background: var(--bgRoadmap);
+
+    &-grass {
+        margin-top: -20vw;
+        position: relative;
+
+        img:first-child {
+            position: relative;
+            z-index: 2;
+        }
+
+        .rabbit {
+            position: absolute;
+            left: 8%;
+            animation: toDown 10s linear infinite;
+            width: 10vw;
+            z-index: 0;
+        }
+    }
+
+    &-image {
+        margin-top: -10vw;
+        position: relative;
+        z-index: 3;
+    }
+
+    &-container {
+        position: absolute;
+        top: 16%;
+        left: 35%;
+    }
+
+    &-content {
+        position: relative;
+        width: 14vw;
+
+        // img {}
+
+        .item {
+            position: absolute;
+            top: 4vw;
+            left: -11.8vw;
+            @include flexGap(3vw);
+            align-items: center;
+            width: 35vw;
+            color: var(--black);
+            font-family: 'Lapsus';
+
+            &.--second {
+                top: 15vw;
+                left: -15.4vw;
+            }
+
+            &.--third {
+                top: 28vw;
+                left: -1.2vw;
+            }
+
+            &.--fourth {
+                top: 43vw;
+                left: -14.7vw;
+            }
+
+            // &>h4 {
+            //     font-size: 32px;
+            //     width: 140px;
+            // }
+
+            // .circle {
+            //     width: 24px;
+            //     height: 24px;
+            //     border-radius: 50%;
+            //     background: var(--white);
+            //     position: relative;
+
+            //     &::before {
+            //         position: absolute;
+            //         width: 40px;
+            //         height: 40px;
+            //         border-radius: 50%;
+            //         content: "";
+            //         left: 50%;
+            //         top: 50%;
+            //         transform: translate(-50%, -50%);
+            //         background: rgba(255, 255, 255, 0.4);
+            //     }
+            // }
+
+            // &-content {
+            //     text-align: center;
+            //     width: 270px;
+
+            //     h4 {
+            //         font-size: 32px;
+            //     }
+
+            //     p {
+            //         font-family: 'Comic Neue', cursive;
+            //         font-size: 24px;
+            //     }
+            // }
+        }
+    }
+}
+
+@keyframes toDown {
+    0% {
+        top: 60%;
+    }
+
+    50% {
+        top: 77%;
+    }
+
+    100% {
+        top: 60%;
+    }
+}

@@ -1,0 +1,128 @@
+.benefit {
+    background-color: var(--bgBenefit);
+    padding: 10vw 0;
+    margin-top: -2px;
+
+    @include TabletMobile {
+        padding: 50px 0 120px;
+    }
+
+    @include MinTabletMobile {
+        padding: 50px 20px;
+    }
+
+    &-title {
+        width: 60vw;
+        margin: 0 auto 10vw;
+    }
+
+    &-container {
+        position: relative;
+        padding-right: 5vw;
+
+        &>img {
+            width: 65vw;
+            margin: 0 auto;
+
+            @include MinTabletMobile {
+                display: none;
+            }
+        }
+
+        @include MinTabletMobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+        }
+
+        @include Mobile {
+            grid-template-columns: 1fr;
+            width: 60%;
+        }
+    }
+
+    &-image {
+        width: 30vw;
+        position: absolute;
+        left: 50%;
+        top: 37%;
+        transform: translate(-50%, -50%);
+
+        @include MinTabletMobile {
+            display: none;
+        }
+    }
+
+    &-item {
+        background: var(--bgGradient);
+        border: 2px solid var(--white);
+        border-radius: 8px;
+        color: var(--white);
+        position: absolute;
+        width: 25vw;
+        padding: 12px;
+
+        &:nth-child(2n + 1) {
+            text-align: right;
+
+            @include MinTabletMobile {
+                text-align: left;
+            }
+        }
+
+        h6 {
+            font-size: 2.2vw;
+            font-family: 'Lapsus';
+
+            @include Desktop {
+                font-size: 28px;
+            }
+
+            @include TabletMobile {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            margin-top: 16px;
+            font-family: 'Comic Neue', cursive;
+            line-height: 1.5;
+            font-size: 1.2vw;
+
+            @include Desktop {
+                font-size: 16px;
+            }
+
+            @include TabletMobile {
+                font-size: 13px;
+            }
+        }
+
+        &.--first {
+            left: 10vw;
+            top: 0vw;
+        }
+
+        &.--second {
+            left: 72vw;
+            top: -4vw;
+        }
+
+        &.--third {
+            left: 12vw;
+            top: 32vw;
+        }
+
+        &.--fourth {
+            left: 69vw;
+            top: 30vw;
+        }
+
+        @include MinTabletMobile {
+            position: unset;
+            width: auto;
+        }
+    }
+}
