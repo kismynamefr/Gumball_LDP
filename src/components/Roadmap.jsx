@@ -26,7 +26,7 @@ const Roadmap = () => {
         <img src={item3} alt="roadmap" />
         <div className="roadmap-container">
           <div className="roadmap-content">
-            <img src={vector} alt={vector} />
+            <img src={vector} alt={vector} data-aos="fade-in" data-aos-duration="3000"/>
             <div className="item">
               <img src={phase1} alt="phase" />
             </div>

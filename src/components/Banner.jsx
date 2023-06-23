@@ -20,10 +20,10 @@ const Banner = () => {
       <div className="banner-bg">
         <img src={bg2} alt="background" />
         <div className="banner-image">
-          <img src={item4} alt="item" />
+          <img src={item4} alt="item" data-aos="fade-right" data-aos-duration="3000"/>
           <div className="banner-image-right">
             <img src={item1} alt="item" className="rainbow" />
-            <img src={item2} alt="item" />
+            <img src={item2} alt="item" data-aos="fade-left" data-aos-duration="3000"/>
           </div>
         </div>
         <img src={item3} alt="item" className="refrigerator" />
@@ -31,8 +31,8 @@ const Banner = () => {
       <div className="banner-bg --bg-house">
         <img src={bg1} alt="background" />
         <div className="banner-image">
-          <img src={item6} alt="item" className="text" />
-          <img src={item5} alt="item" />
+          <img src={item6} alt="item" className="text" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="1000"/>
+          <img src={item5} alt="item" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="1000"/>
         </div>
       </div>
       <div className="banner-footer">
@@ -40,8 +40,8 @@ const Banner = () => {
           <img src={item7} alt="item" className="paper --top" />
           <img src={item8} alt="item" className="paper" />
           <div className="image">
-            <img src={item11} alt="item" />
-            <img src={item9} alt="item" className="chervon" />
+            <img src={item11} alt="item" data-aos="flip-up" data-aos-duration="3000"/>
+            <img src={item9} alt="item" className="chervon" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="1000"/>
           </div>
           <p>
             Just like Gumball's endless adventures, $GUMBALL offers a thrilling
