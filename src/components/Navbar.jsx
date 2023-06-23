@@ -76,10 +76,16 @@ const Navbar = () => {
       <div className="navbar-link">{renderListNav()}</div>
       <div className="navbar-right">
         <div className="navbar-right__social">
-          <a href="#">
+          <a
+            href="https://t.me/gumballportal?fbclid=IwAR3Hw9vpMp8iO0BAGTRQ8rlQhGpJQs5AW4X2PxMIFIgowJB9cD8C_tvFqDM"
+            target="_blank"
+          >
             <img src={telegram} alt="telegram" />
           </a>
-          <a href="#">
+          <a
+            href="https://twitter.com/GumballETH_/status/1671179691741544449?s=20&fbclid=IwAR2W7a73xSwaHLolGjXNPk8V4Vh2m7f9Bj2CO9Qrx0Ycvj6pJu9UGJbOnL8"
+            target="_blank"
+          >
             <img src={twitter} alt="twitter" />
           </a>
         </div>
