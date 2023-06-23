@@ -26,10 +26,8 @@ const DashboardLayout = ({ props }) => {
 
   useEffect(() => {
     AOS.init({
-      disable: function () {
-        let maxWidth = 768
-        return window.innerWidth <= maxWidth
-      },
+      disable: window.innerWidth < 768,
+      once: true
     })
     return () => AOS.refresh()
   }, [])
