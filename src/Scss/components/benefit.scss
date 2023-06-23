@@ -1,229 +1,232 @@
 .benefit {
-    background-color: var(--bgBenefit);
-    padding: 10vw 0;
-    margin-top: -2px;
+  background-color: var(--bgBenefit);
+  padding: 10vw 0;
+  margin-top: -2px;
 
-    @include TabletMobile {
-        padding: 50px 0 120px;
+  @include TabletMobile {
+    padding: 50px 0 120px;
+  }
+
+  @include MinTabletMobile {
+    padding: 50px 20px;
+  }
+
+  &-title {
+    width: 60vw;
+    margin: 0 auto 10vw;
+  }
+
+  &-container {
+    position: relative;
+    padding-right: 5vw;
+
+    & > img {
+      width: 65vw;
+      margin: 0 auto;
+
+      @include MinTabletMobile {
+        display: none;
+      }
     }
 
     @include MinTabletMobile {
-        padding: 50px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      width: 80%;
+      margin: auto;
     }
 
-    &-title {
-        width: 60vw;
-        margin: 0 auto 10vw;
+    @include Mobile {
+      grid-template-columns: 1fr;
+      width: 60%;
+    }
+  }
+
+  &-image {
+    width: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 37%;
+    transform: translate(-50%, -50%);
+
+    @include MinTabletMobile {
+      display: none;
+    }
+  }
+
+  &-item {
+    background: var(--bgGradient);
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    color: var(--white);
+    position: absolute;
+    width: 25vw;
+    padding: 12px;
+
+    &:nth-child(2n + 1) {
+      text-align: right;
+
+      @include MinTabletMobile {
+        text-align: left;
+      }
     }
 
-    &-container {
-        position: relative;
-        padding-right: 5vw;
+    h6 {
+      font-size: 2.2vw;
+      font-family: "Lapsus";
 
-        &>img {
-            width: 65vw;
-            margin: 0 auto;
+      @include Desktop {
+        font-size: 28px;
+      }
 
-            @include MinTabletMobile {
-                display: none;
-            }
-        }
-
-        @include MinTabletMobile {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            width: 80%;
-            margin: auto;
-        }
-
-        @include Mobile {
-            grid-template-columns: 1fr;
-            width: 60%;
-        }
+      @include TabletMobile {
+        font-size: 20px;
+      }
     }
 
-    &-image {
-        width: 30vw;
-        position: absolute;
-        left: 50%;
-        top: 37%;
-        transform: translate(-50%, -50%);
+    p {
+      margin-top: 16px;
+      font-family: "Comic Neue", cursive;
+      line-height: 1.5;
+      font-size: 1.2vw;
 
-        @include MinTabletMobile {
-            display: none;
-        }
+      @include Desktop {
+        font-size: 16px;
+      }
+
+      @include TabletMobile {
+        font-size: 13px;
+      }
     }
 
-    &-item {
-        background: var(--bgGradient);
-        border: 2px solid var(--white);
-        border-radius: 8px;
-        color: var(--white);
-        position: absolute;
-        width: 25vw;
-        padding: 12px;
-
-        &:nth-child(2n + 1) {
-            text-align: right;
-
-            @include MinTabletMobile {
-                text-align: left;
-            }
-        }
-
-        h6 {
-            font-size: 2.2vw;
-            font-family: 'Lapsus';
-
-            @include Desktop {
-                font-size: 28px;
-            }
-
-            @include TabletMobile {
-                font-size: 20px;
-            }
-        }
-
-        p {
-            margin-top: 16px;
-            font-family: 'Comic Neue', cursive;
-            line-height: 1.5;
-            font-size: 1.2vw;
-
-            @include Desktop {
-                font-size: 16px;
-            }
-
-            @include TabletMobile {
-                font-size: 13px;
-            }
-        }
-
-        &.--first {
-            left: 10vw;
-            top: 0vw;
-        }
-
-        &.--second {
-            left: 72vw;
-            top: -4vw;
-        }
-
-        &.--third {
-            left: 12vw;
-            top: 32vw;
-        }
-
-        &.--fourth {
-            left: 69vw;
-            top: 30vw;
-        }
-
-        @include MinTabletMobile {
-            position: unset;
-            width: auto;
-        }
+    &.--first {
+      left: 10vw;
+      top: 0vw;
     }
+
+    &.--second {
+      left: 72vw;
+      top: -4vw;
+    }
+
+    &.--third {
+      left: 12vw;
+      top: 32vw;
+    }
+
+    &.--fourth {
+      left: 69vw;
+      top: 30vw;
+    }
+
+    @include MinTabletMobile {
+      position: unset;
+      width: auto;
+    }
+  }
 }
 
 .loading {
-    background: url('../../assets/images/bg-banner2.png') center center / cover no-repeat;
-    position: fixed;
-    inset: 0;
-    z-index: 100000;
+  background: url("../../assets/images/bg-banner2.png") center center / cover
+    no-repeat;
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
 
-    &-container {
-        position: absolute;
-        left: 50%;
-        top: 45%;
-        transform: translate(-50%, -50%);
+  &-container {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        &>img {
-            transform: rotate(-8.6deg);
-            width: 40vw;
+    & > img {
+      transform: rotate(-8.6deg);
+      width: 40vw;
 
-            @include TabletMobile {
-                width: 50vw;
-            }
+      @include TabletMobile {
+        width: 50vw;
+      }
 
-            @include MinTabletMobile {
-                width: 65vw;
-            }
-        }
+      @include MinTabletMobile {
+        width: 65vw;
+      }
+    }
+  }
+
+  .fade-in-anima {
+    opacity: 1 !important;
+  }
+
+  &-button {
+    opacity: 0;
+    margin-top: 20px;
+    border-radius: 24px;
+    transition: var(--smooth);
+    cursor: pointer;
+
+    &:hover {
+      scale: 0.9;
+      box-shadow: 2px 4px 12px var(--yellow);
+    }
+  }
+
+  .progress {
+    --progress: 0%;
+    width: 60vw;
+    height: 50px;
+    border: 4px solid var(--black);
+    border-radius: 8px;
+    box-shadow: 0 0 10px #aaa;
+
+    @include TabletMobile {
+      width: 80vw;
     }
 
-    &-button {
-        margin-top: 20px;
-        border-radius: 24px;
-        transition: var(--smooth);
-        cursor: pointer;
+    @include MinTabletMobile {
+      width: 90vw;
+      height: 40px;
+    }
+  }
 
-        &:hover {
-            scale: 0.9;
-            box-shadow: 2px 4px 12px var(--yellow);
-        }
+  .progress .bar {
+    border-radius: 2px;
+    width: var(--progress);
+    height: 100%;
+    background: var(--yellow);
+    background-repeat: repeat;
+    animation: shine 4s ease-in infinite, end 1s ease-out 1 7s;
+    transition: width 3s ease 3s;
+  }
+
+  @property --progress {
+    syntax: "<length>";
+    initial-value: 0%;
+    inherits: true;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 0 0;
     }
 
-    .progress {
-        --progress: 0%;
-        width: 60vw;
-        height: 50px;
-        border: 4px solid var(--black);
-        border-radius: 8px;
-        box-shadow: 0 0 10px #aaa;
+    100% {
+      background-position: 0 50px;
+    }
+  }
 
-        @include TabletMobile {
-            width: 80vw;
-        }
-
-        @include MinTabletMobile {
-            width: 90vw;
-            height: 40px;
-        }
+  @keyframes end {
+    0%,
+    100% {
+      box-shadow: 0 0 10px 0px var(--yellow);
     }
 
-    .progress .bar {
-        border-radius: 2px;
-        width: var(--progress);
-        height: 100%;
-        background: var(--yellow);
-        background-repeat: repeat;
-        animation:
-            shine 4s ease-in infinite,
-            end 1s ease-out 1 7s;
-        transition: width 3s ease 3s;
+    50% {
+      box-shadow: 0 0 15px 5px var(--yellow);
     }
-
-    @property --progress {
-        syntax: "<length>";
-        initial-value: 0%;
-        inherits: true;
-    }
-
-    @keyframes shine {
-        0% {
-            background-position: 0 0;
-        }
-
-        100% {
-            background-position: 0 50px;
-        }
-    }
-
-    @keyframes end {
-
-        0%,
-        100% {
-            box-shadow: 0 0 10px 0px var(--yellow);
-        }
-
-        50% {
-            box-shadow: 0 0 15px 5px var(--yellow);
-        }
-    }
+  }
 }
