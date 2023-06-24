@@ -1,18 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import EndlessSound from '../assets/imonmyway.mp3'
-import useHowlerProvider from '../hooks/useHowlerProvider'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Loading from '../components/Loading'
+import EndlessSound from '../assets/imonmyway.mp3'
+import ReactHowler from 'react-howler'
 
 const DashboardLayout = ({ props }) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isCompleted, setIsCompleted] = useState(false)
-  const useHowler = useHowlerProvider({
-    type: 'play',
-    soundFile: EndlessSound,
-    volume: 0.5,
-  })
 
   const handleLoading = async () => {
     const bar = document.querySelector('.bar')
@@ -27,7 +22,7 @@ const DashboardLayout = ({ props }) => {
   useEffect(() => {
     AOS.init({
       disable: window.innerWidth < 768,
-      once: true
+      once: true,
     })
     return () => AOS.refresh()
   }, [])
@@ -39,7 +34,10 @@ const DashboardLayout = ({ props }) => {
   return isLoading ? (
     <Loading setIsLoading={setIsLoading} isCompleted={isCompleted} />
   ) : (
-    <div className="app">{props}</div>
+    <>
+      <ReactHowler src={EndlessSound} playing={true} />
+      <div className="app">{props}</div>
+    </>
   )
 }
 

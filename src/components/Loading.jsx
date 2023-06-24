@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import rainbow from '../assets/images/banner1.png'
 import btn from '../assets/images/button.png'
 
+
 const Loading = ({ isCompleted, setIsLoading }) => {
+  const handleClickSoundAndStartPage = () => {
+    setIsLoading(false)
+  }
+
   return (
     <div className="loading">
       <div className="loading-container">
@@ -12,7 +17,7 @@ const Loading = ({ isCompleted, setIsLoading }) => {
         </div>
         <div
           className={`loading-button ${isCompleted ? 'fade-in-anima' : ''}`}
-          onClick={() => setIsLoading(false)}
+          onClick={handleClickSoundAndStartPage}
         >
           <img src={btn} alt="button" />
         </div>

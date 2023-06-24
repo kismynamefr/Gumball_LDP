@@ -22,8 +22,7 @@ const useHowlerProvider = ({ type, volume, soundFile, autoplay, loop, soundID })
         });
         switch (type) {
             case "play":
-                let SoundID = sound.play()
-                return SoundID;
+                return sound;
             case "stopWithID":
                 return sound.stop([soundID]);
             case "pauseWithID":
