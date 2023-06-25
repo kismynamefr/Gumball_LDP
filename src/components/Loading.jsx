@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import rainbow from '../assets/images/banner1.png'
-import btn from '../assets/images/button.png'
+import btn from '../assets/images/start.png'
 
 
 const Loading = ({ isCompleted, setIsLoading }) => {
